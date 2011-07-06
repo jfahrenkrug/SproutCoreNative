@@ -14,8 +14,6 @@
 		8FA30A4613C43D2700DF6FA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30A4513C43D2700DF6FA1 /* main.m */; };
 		8FA30A4913C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30A4813C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.m */; };
 		8FA30A4C13C43D2700DF6FA1 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA30A4A13C43D2700DF6FA1 /* MainWindow.xib */; };
-		8FA30A4F13C43D2700DF6FA1 /* SproutCoreNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30A4E13C43D2700DF6FA1 /* SproutCoreNativeViewController.m */; };
-		8FA30A5213C43D2700DF6FA1 /* SproutCoreNativeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA30A5013C43D2700DF6FA1 /* SproutCoreNativeViewController.xib */; };
 		8FA30A5913C43D2800DF6FA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A3813C43D2700DF6FA1 /* UIKit.framework */; };
 		8FA30A5A13C43D2800DF6FA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A3A13C43D2700DF6FA1 /* Foundation.framework */; };
 		8FA30A5B13C43D2800DF6FA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A3C13C43D2700DF6FA1 /* CoreGraphics.framework */; };
@@ -27,6 +25,7 @@
 		8FA30A7613C4401000DF6FA1 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A7513C4401000DF6FA1 /* libicucore.dylib */; };
 		8FA30A8313C449A700DF6FA1 /* handlebars.1.0.0.beta.3.js in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30A8213C449A700DF6FA1 /* handlebars.1.0.0.beta.3.js */; };
 		8FA30A8413C449AB00DF6FA1 /* handlebars.1.0.0.beta.3.js in Resources */ = {isa = PBXBuildFile; fileRef = 8FA30A8213C449A700DF6FA1 /* handlebars.1.0.0.beta.3.js */; };
+		8FA30A8713C4540400DF6FA1 /* HandlebarsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30A8613C4540400DF6FA1 /* HandlebarsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,9 +50,6 @@
 		8FA30A4713C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SproutCoreNativeAppDelegate.h; sourceTree = "<group>"; };
 		8FA30A4813C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SproutCoreNativeAppDelegate.m; sourceTree = "<group>"; };
 		8FA30A4B13C43D2700DF6FA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		8FA30A4D13C43D2700DF6FA1 /* SproutCoreNativeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SproutCoreNativeViewController.h; sourceTree = "<group>"; };
-		8FA30A4E13C43D2700DF6FA1 /* SproutCoreNativeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SproutCoreNativeViewController.m; sourceTree = "<group>"; };
-		8FA30A5113C43D2700DF6FA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SproutCoreNativeViewController.xib; sourceTree = "<group>"; };
 		8FA30A5813C43D2800DF6FA1 /* SproutCoreNativeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SproutCoreNativeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA30A6013C43D2800DF6FA1 /* SproutCoreNativeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SproutCoreNativeTests-Info.plist"; sourceTree = "<group>"; };
 		8FA30A6213C43D2800DF6FA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -73,6 +69,8 @@
 		8FA30A7F13C4407C00DF6FA1 /* JSValueRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSValueRef.h; sourceTree = "<group>"; };
 		8FA30A8013C4407C00DF6FA1 /* WebKitAvailability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebKitAvailability.h; sourceTree = "<group>"; };
 		8FA30A8213C449A700DF6FA1 /* handlebars.1.0.0.beta.3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = handlebars.1.0.0.beta.3.js; sourceTree = "<group>"; };
+		8FA30A8513C4540400DF6FA1 /* HandlebarsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandlebarsTableViewController.h; sourceTree = "<group>"; };
+		8FA30A8613C4540400DF6FA1 /* HandlebarsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandlebarsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,10 +140,9 @@
 				8FA30A4713C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.h */,
 				8FA30A4813C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.m */,
 				8FA30A4A13C43D2700DF6FA1 /* MainWindow.xib */,
-				8FA30A4D13C43D2700DF6FA1 /* SproutCoreNativeViewController.h */,
-				8FA30A4E13C43D2700DF6FA1 /* SproutCoreNativeViewController.m */,
-				8FA30A5013C43D2700DF6FA1 /* SproutCoreNativeViewController.xib */,
 				8FA30A3F13C43D2700DF6FA1 /* Supporting Files */,
+				8FA30A8513C4540400DF6FA1 /* HandlebarsTableViewController.h */,
+				8FA30A8613C4540400DF6FA1 /* HandlebarsTableViewController.m */,
 			);
 			path = SproutCoreNative;
 			sourceTree = "<group>";
@@ -279,7 +276,6 @@
 				8FA30A4313C43D2700DF6FA1 /* InfoPlist.strings in Resources */,
 				8FA30A8413C449AB00DF6FA1 /* handlebars.1.0.0.beta.3.js in Resources */,
 				8FA30A4C13C43D2700DF6FA1 /* MainWindow.xib in Resources */,
-				8FA30A5213C43D2700DF6FA1 /* SproutCoreNativeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,8 +313,8 @@
 			files = (
 				8FA30A4613C43D2700DF6FA1 /* main.m in Sources */,
 				8FA30A4913C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.m in Sources */,
-				8FA30A4F13C43D2700DF6FA1 /* SproutCoreNativeViewController.m in Sources */,
 				8FA30A8313C449A700DF6FA1 /* handlebars.1.0.0.beta.3.js in Sources */,
+				8FA30A8713C4540400DF6FA1 /* HandlebarsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,14 +351,6 @@
 				8FA30A4B13C43D2700DF6FA1 /* en */,
 			);
 			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		8FA30A5013C43D2700DF6FA1 /* SproutCoreNativeViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8FA30A5113C43D2700DF6FA1 /* en */,
-			);
-			name = SproutCoreNativeViewController.xib;
 			sourceTree = "<group>";
 		};
 		8FA30A6113C43D2800DF6FA1 /* InfoPlist.strings */ = {
