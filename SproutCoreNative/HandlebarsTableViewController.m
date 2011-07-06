@@ -37,20 +37,37 @@ static JSGlobalContextRef gGlobalJSContext = NULL;
 + (JSGlobalContextRef) globalJSContext 
 {
 	if (gGlobalJSContext == NULL) {
-		gGlobalJSContext = JSGlobalContextCreate(NULL);
+		gGlobalJSContext = JSGlobalContextCreate(NULL);       
         
-        // set up Handlebars
-        NSString *handlebars = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"handlebars.1.0.0.beta.3" ofType:@"js"]  encoding:NSUTF8StringEncoding error:nil];
+        NSString *domcore = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"domcore" ofType:@"js"]  encoding:NSUTF8StringEncoding error:nil];
+                
+        NSString *jquery = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"jquery-1.6.2" ofType:@"js"]  encoding:NSUTF8StringEncoding error:nil];
+        
+        NSString *sproutcore = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sproutcore-2.0.beta.1" ofType:@"js"]  encoding:NSUTF8StringEncoding error:nil];
         
         //evalute handlebars 
-        [self runJS:handlebars];
+        //[self runJS:handlebars];
+        NSLog(@"loading domcore...");
+        [self runJS:domcore];
         
+        // set up fake window
+        NSLog(@"setting up dom env...");
+        [self runJS:@"this.prototype = core; window = this; window.document = new core.Document(); location = {href: 'http://localhost'}; window.document.prototype = core; window.addEventListener = (new core.Node()).addEventListener; window.navigator = {userAgent: 'Webkit'}; console = {log: function() {}};"];
+                
+        NSLog(@"loading jquery...");
+        [self runJS:jquery];
+        NSLog(@"loading sproutcore...");
+        [self runJS:sproutcore];
+            
         //create and compile the template
-        [self runJS:@"var source   = \"Yo, {{firstName}} {{lastName}}!\";\
+        [self runJS:@"var source   = \"Yo, {{fullName}}!\";\
                       var template = Handlebars.compile(source);"];
         
         //set up the data
-        [self runJS:@"var data = [{firstName: 'Charles', lastName: 'Jolley'}, {firstName: 'Yehuda', lastName: 'Katz'}, {firstName: 'Johannes', lastName: 'Fahrenkrug'}, {firstName: 'Tom', lastName: 'Dale'}, {firstName: 'Majd', lastName: 'Taby'}, {firstName: 'Colin', lastName: 'Campbell'}];"];
+        [self runJS:@"var people = [{firstName: 'Charles', lastName: 'Jolley'}, {firstName: 'Yehuda', lastName: 'Katz'}, {firstName: 'Johannes', lastName: 'Fahrenkrug'}, {firstName: 'Tom', lastName: 'Dale'}, {firstName: 'Majd', lastName: 'Taby'}, {firstName: 'Colin', lastName: 'Campbell'}];"];
+        
+        //create an SC Person class
+        [self runJS:@"Person = SC.Object.extend({firstName: null, lastName: null, fullName: function() {return this.get('firstName')+' '+this.get('lastName');}.property('firstName', 'lastName')});"];
 	}
 	
 	return gGlobalJSContext;
@@ -58,13 +75,36 @@ static JSGlobalContextRef gGlobalJSContext = NULL;
 
 + (NSString *)runJS:(NSString *)aJSString 
 {
+    if (!aJSString) {
+        NSLog(@"JS String is empty!");
+        return nil;
+    }
+    
+    
     JSStringRef scriptJS = JSStringCreateWithUTF8CString([aJSString UTF8String]);
-    JSValueRef result = JSEvaluateScript([self globalJSContext], scriptJS, NULL, NULL, 1, NULL); 
-    JSStringRef jstrArg = JSValueToStringCopy([self globalJSContext], result, NULL);
-    NSString* res = (NSString*)JSStringCopyCFString(kCFAllocatorDefault, jstrArg); 
+    JSValueRef exception = NULL;
+    
+    JSValueRef result = JSEvaluateScript([self globalJSContext], scriptJS, NULL, NULL, 0, &exception); 
+    NSString *res = nil;
+    
+    if (!result) {
+        if (exception) {
+            JSStringRef exceptionArg = JSValueToStringCopy([self globalJSContext], exception, NULL);
+            NSString* exceptionRes = (NSString*)JSStringCopyCFString(kCFAllocatorDefault, exceptionArg); 
+            
+            JSStringRelease(exceptionArg);
+            NSLog(@"JavaScript exception: %@", exceptionRes);
+        }
+        
+        NSLog(@"No result returned");
+    } else {
+        JSStringRef jstrArg = JSValueToStringCopy([self globalJSContext], result, NULL);
+        res = (NSString*)JSStringCopyCFString(kCFAllocatorDefault, jstrArg); 
+        
+        JSStringRelease(jstrArg);
+    }
     
     JSStringRelease(scriptJS);
-    JSStringRelease(jstrArg);
     
     return res;
 }
@@ -127,7 +167,7 @@ static JSGlobalContextRef gGlobalJSContext = NULL;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSString* length = [[self class] runJS:@"data.length;"];
+    NSString* length = [[self class] runJS:@"people.length;"];
     
     return [length intValue];
 }
@@ -142,7 +182,8 @@ static JSGlobalContextRef gGlobalJSContext = NULL;
     }
     
     // Configure the cell...
-    cell.textLabel.text = [[self class] runJS:[NSString stringWithFormat:@"template(data[%i]);", indexPath.row]];
+    // Create instance of Person class and get its fullName property and pass that to the Handlebars template
+    cell.textLabel.text = [[self class] runJS:[NSString stringWithFormat:@"template({fullName: Person.create(people[%i]).get('fullName')});", indexPath.row]];
     
     return cell;
 }

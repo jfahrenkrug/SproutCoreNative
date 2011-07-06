@@ -197,7 +197,7 @@ jQuery.fn = jQuery.prototype = {
 		// HANDLE: $(function)
 		// Shortcut for document ready
 		} else if ( jQuery.isFunction( selector ) ) {
-			return rootjQuery.ready( selector );
+                                     return null; //rootjQuery.ready( selector );
 		}
 
 		if (selector.selector !== undefined) {
