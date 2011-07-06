@@ -23,9 +23,13 @@
 		8FA30A7213C43FC600DF6FA1 /* libiOSJavaScriptCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A7113C43FC600DF6FA1 /* libiOSJavaScriptCore.a */; };
 		8FA30A7413C4400400DF6FA1 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A7313C4400400DF6FA1 /* libstdc++.dylib */; };
 		8FA30A7613C4401000DF6FA1 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A7513C4401000DF6FA1 /* libicucore.dylib */; };
-		8FA30A8313C449A700DF6FA1 /* handlebars.1.0.0.beta.3.js in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30A8213C449A700DF6FA1 /* handlebars.1.0.0.beta.3.js */; };
-		8FA30A8413C449AB00DF6FA1 /* handlebars.1.0.0.beta.3.js in Resources */ = {isa = PBXBuildFile; fileRef = 8FA30A8213C449A700DF6FA1 /* handlebars.1.0.0.beta.3.js */; };
 		8FA30A8713C4540400DF6FA1 /* HandlebarsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30A8613C4540400DF6FA1 /* HandlebarsTableViewController.m */; };
+		8FA30B1F13C4B26000DF6FA1 /* sproutcore-2.0.beta.1.js in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30B1D13C4B26000DF6FA1 /* sproutcore-2.0.beta.1.js */; };
+		8FA30B2113C4B2DA00DF6FA1 /* sproutcore-2.0.beta.1.js in Resources */ = {isa = PBXBuildFile; fileRef = 8FA30B1D13C4B26000DF6FA1 /* sproutcore-2.0.beta.1.js */; };
+		8FA30B5813C4D50900DF6FA1 /* jquery-1.6.2.js in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30B5713C4D50900DF6FA1 /* jquery-1.6.2.js */; };
+		8FA30B5913C4D54200DF6FA1 /* jquery-1.6.2.js in Resources */ = {isa = PBXBuildFile; fileRef = 8FA30B5713C4D50900DF6FA1 /* jquery-1.6.2.js */; };
+		8FA30B5B13C4D74200DF6FA1 /* domcore.js in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30B5A13C4D74200DF6FA1 /* domcore.js */; };
+		8FA30B5C13C4D76400DF6FA1 /* domcore.js in Resources */ = {isa = PBXBuildFile; fileRef = 8FA30B5A13C4D74200DF6FA1 /* domcore.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,9 +72,11 @@
 		8FA30A7E13C4407C00DF6FA1 /* JSStringRefCF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSStringRefCF.h; sourceTree = "<group>"; };
 		8FA30A7F13C4407C00DF6FA1 /* JSValueRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSValueRef.h; sourceTree = "<group>"; };
 		8FA30A8013C4407C00DF6FA1 /* WebKitAvailability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebKitAvailability.h; sourceTree = "<group>"; };
-		8FA30A8213C449A700DF6FA1 /* handlebars.1.0.0.beta.3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = handlebars.1.0.0.beta.3.js; sourceTree = "<group>"; };
 		8FA30A8513C4540400DF6FA1 /* HandlebarsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandlebarsTableViewController.h; sourceTree = "<group>"; };
 		8FA30A8613C4540400DF6FA1 /* HandlebarsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandlebarsTableViewController.m; sourceTree = "<group>"; };
+		8FA30B1D13C4B26000DF6FA1 /* sproutcore-2.0.beta.1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "sproutcore-2.0.beta.1.js"; sourceTree = "<group>"; };
+		8FA30B5713C4D50900DF6FA1 /* jquery-1.6.2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.6.2.js"; sourceTree = "<group>"; };
+		8FA30B5A13C4D74200DF6FA1 /* domcore.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = domcore.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,7 +203,9 @@
 		8FA30A8113C447BD00DF6FA1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8FA30A8213C449A700DF6FA1 /* handlebars.1.0.0.beta.3.js */,
+				8FA30B5713C4D50900DF6FA1 /* jquery-1.6.2.js */,
+				8FA30B1D13C4B26000DF6FA1 /* sproutcore-2.0.beta.1.js */,
+				8FA30B5A13C4D74200DF6FA1 /* domcore.js */,
 			);
 			name = Resources;
 			path = SproutCoreNative;
@@ -274,7 +282,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FA30A4313C43D2700DF6FA1 /* InfoPlist.strings in Resources */,
-				8FA30A8413C449AB00DF6FA1 /* handlebars.1.0.0.beta.3.js in Resources */,
+				8FA30B5913C4D54200DF6FA1 /* jquery-1.6.2.js in Resources */,
+				8FA30B2113C4B2DA00DF6FA1 /* sproutcore-2.0.beta.1.js in Resources */,
+				8FA30B5C13C4D76400DF6FA1 /* domcore.js in Resources */,
 				8FA30A4C13C43D2700DF6FA1 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,8 +323,10 @@
 			files = (
 				8FA30A4613C43D2700DF6FA1 /* main.m in Sources */,
 				8FA30A4913C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.m in Sources */,
-				8FA30A8313C449A700DF6FA1 /* handlebars.1.0.0.beta.3.js in Sources */,
 				8FA30A8713C4540400DF6FA1 /* HandlebarsTableViewController.m in Sources */,
+				8FA30B1F13C4B26000DF6FA1 /* sproutcore-2.0.beta.1.js in Sources */,
+				8FA30B5813C4D50900DF6FA1 /* jquery-1.6.2.js in Sources */,
+				8FA30B5B13C4D74200DF6FA1 /* domcore.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
