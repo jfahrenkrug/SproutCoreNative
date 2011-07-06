@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8FA30A3913C43D2700DF6FA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A3813C43D2700DF6FA1 /* UIKit.framework */; };
+		8FA30A3B13C43D2700DF6FA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A3A13C43D2700DF6FA1 /* Foundation.framework */; };
+		8FA30A3D13C43D2700DF6FA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A3C13C43D2700DF6FA1 /* CoreGraphics.framework */; };
+		8FA30A4313C43D2700DF6FA1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FA30A4113C43D2700DF6FA1 /* InfoPlist.strings */; };
+		8FA30A4613C43D2700DF6FA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30A4513C43D2700DF6FA1 /* main.m */; };
+		8FA30A4913C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30A4813C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.m */; };
+		8FA30A4C13C43D2700DF6FA1 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA30A4A13C43D2700DF6FA1 /* MainWindow.xib */; };
+		8FA30A4F13C43D2700DF6FA1 /* SproutCoreNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30A4E13C43D2700DF6FA1 /* SproutCoreNativeViewController.m */; };
+		8FA30A5213C43D2700DF6FA1 /* SproutCoreNativeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA30A5013C43D2700DF6FA1 /* SproutCoreNativeViewController.xib */; };
+		8FA30A5913C43D2800DF6FA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A3813C43D2700DF6FA1 /* UIKit.framework */; };
+		8FA30A5A13C43D2800DF6FA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A3A13C43D2700DF6FA1 /* Foundation.framework */; };
+		8FA30A5B13C43D2800DF6FA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A3C13C43D2700DF6FA1 /* CoreGraphics.framework */; };
+		8FA30A6313C43D2800DF6FA1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FA30A6113C43D2800DF6FA1 /* InfoPlist.strings */; };
+		8FA30A6613C43D2800DF6FA1 /* SproutCoreNativeTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 8FA30A6513C43D2800DF6FA1 /* SproutCoreNativeTests.h */; };
+		8FA30A6813C43D2800DF6FA1 /* SproutCoreNativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30A6713C43D2800DF6FA1 /* SproutCoreNativeTests.m */; };
+		8FA30A7213C43FC600DF6FA1 /* libiOSJavaScriptCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A7113C43FC600DF6FA1 /* libiOSJavaScriptCore.a */; };
+		8FA30A7413C4400400DF6FA1 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A7313C4400400DF6FA1 /* libstdc++.dylib */; };
+		8FA30A7613C4401000DF6FA1 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A7513C4401000DF6FA1 /* libicucore.dylib */; };
+		8FA30A8313C449A700DF6FA1 /* handlebars.1.0.0.beta.3.js in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30A8213C449A700DF6FA1 /* handlebars.1.0.0.beta.3.js */; };
+		8FA30A8413C449AB00DF6FA1 /* handlebars.1.0.0.beta.3.js in Resources */ = {isa = PBXBuildFile; fileRef = 8FA30A8213C449A700DF6FA1 /* handlebars.1.0.0.beta.3.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FA30A5C13C43D2800DF6FA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FA30A2B13C43D2600DF6FA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FA30A3313C43D2700DF6FA1;
+			remoteInfo = SproutCoreNative;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8FA30A3413C43D2700DF6FA1 /* SproutCoreNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SproutCoreNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FA30A3813C43D2700DF6FA1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8FA30A3A13C43D2700DF6FA1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8FA30A3C13C43D2700DF6FA1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8FA30A4013C43D2700DF6FA1 /* SproutCoreNative-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SproutCoreNative-Info.plist"; sourceTree = "<group>"; };
+		8FA30A4213C43D2700DF6FA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8FA30A4413C43D2700DF6FA1 /* SproutCoreNative-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SproutCoreNative-Prefix.pch"; sourceTree = "<group>"; };
+		8FA30A4513C43D2700DF6FA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8FA30A4713C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SproutCoreNativeAppDelegate.h; sourceTree = "<group>"; };
+		8FA30A4813C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SproutCoreNativeAppDelegate.m; sourceTree = "<group>"; };
+		8FA30A4B13C43D2700DF6FA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		8FA30A4D13C43D2700DF6FA1 /* SproutCoreNativeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SproutCoreNativeViewController.h; sourceTree = "<group>"; };
+		8FA30A4E13C43D2700DF6FA1 /* SproutCoreNativeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SproutCoreNativeViewController.m; sourceTree = "<group>"; };
+		8FA30A5113C43D2700DF6FA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SproutCoreNativeViewController.xib; sourceTree = "<group>"; };
+		8FA30A5813C43D2800DF6FA1 /* SproutCoreNativeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SproutCoreNativeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FA30A6013C43D2800DF6FA1 /* SproutCoreNativeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SproutCoreNativeTests-Info.plist"; sourceTree = "<group>"; };
+		8FA30A6213C43D2800DF6FA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8FA30A6413C43D2800DF6FA1 /* SproutCoreNativeTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SproutCoreNativeTests-Prefix.pch"; sourceTree = "<group>"; };
+		8FA30A6513C43D2800DF6FA1 /* SproutCoreNativeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SproutCoreNativeTests.h; sourceTree = "<group>"; };
+		8FA30A6713C43D2800DF6FA1 /* SproutCoreNativeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SproutCoreNativeTests.m; sourceTree = "<group>"; };
+		8FA30A7113C43FC600DF6FA1 /* libiOSJavaScriptCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiOSJavaScriptCore.a; sourceTree = "<group>"; };
+		8FA30A7313C4400400DF6FA1 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/gcc/arm-apple-darwin10/4.0.1/libstdc++.dylib"; sourceTree = SDKROOT; };
+		8FA30A7513C4401000DF6FA1 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		8FA30A7813C4407C00DF6FA1 /* JavaScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaScript.h; sourceTree = "<group>"; };
+		8FA30A7913C4407C00DF6FA1 /* JavaScriptCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaScriptCore.h; sourceTree = "<group>"; };
+		8FA30A7A13C4407C00DF6FA1 /* JSBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBase.h; sourceTree = "<group>"; };
+		8FA30A7B13C4407C00DF6FA1 /* JSContextRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSContextRef.h; sourceTree = "<group>"; };
+		8FA30A7C13C4407C00DF6FA1 /* JSObjectRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectRef.h; sourceTree = "<group>"; };
+		8FA30A7D13C4407C00DF6FA1 /* JSStringRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSStringRef.h; sourceTree = "<group>"; };
+		8FA30A7E13C4407C00DF6FA1 /* JSStringRefCF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSStringRefCF.h; sourceTree = "<group>"; };
+		8FA30A7F13C4407C00DF6FA1 /* JSValueRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSValueRef.h; sourceTree = "<group>"; };
+		8FA30A8013C4407C00DF6FA1 /* WebKitAvailability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebKitAvailability.h; sourceTree = "<group>"; };
+		8FA30A8213C449A700DF6FA1 /* handlebars.1.0.0.beta.3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = handlebars.1.0.0.beta.3.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8FA30A3113C43D2700DF6FA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FA30A7613C4401000DF6FA1 /* libicucore.dylib in Frameworks */,
+				8FA30A7413C4400400DF6FA1 /* libstdc++.dylib in Frameworks */,
+				8FA30A7213C43FC600DF6FA1 /* libiOSJavaScriptCore.a in Frameworks */,
+				8FA30A3913C43D2700DF6FA1 /* UIKit.framework in Frameworks */,
+				8FA30A3B13C43D2700DF6FA1 /* Foundation.framework in Frameworks */,
+				8FA30A3D13C43D2700DF6FA1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FA30A5413C43D2800DF6FA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FA30A5913C43D2800DF6FA1 /* UIKit.framework in Frameworks */,
+				8FA30A5A13C43D2800DF6FA1 /* Foundation.framework in Frameworks */,
+				8FA30A5B13C43D2800DF6FA1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8FA30A2913C43D2600DF6FA1 = {
+			isa = PBXGroup;
+			children = (
+				8FA30A7713C4407C00DF6FA1 /* JavaScriptCore */,
+				8FA30A8113C447BD00DF6FA1 /* Resources */,
+				8FA30A3E13C43D2700DF6FA1 /* SproutCoreNative */,
+				8FA30A5E13C43D2800DF6FA1 /* SproutCoreNativeTests */,
+				8FA30A3713C43D2700DF6FA1 /* Frameworks */,
+				8FA30A3513C43D2700DF6FA1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8FA30A3513C43D2700DF6FA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FA30A3413C43D2700DF6FA1 /* SproutCoreNative.app */,
+				8FA30A5813C43D2800DF6FA1 /* SproutCoreNativeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FA30A3713C43D2700DF6FA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FA30A7513C4401000DF6FA1 /* libicucore.dylib */,
+				8FA30A7313C4400400DF6FA1 /* libstdc++.dylib */,
+				8FA30A7113C43FC600DF6FA1 /* libiOSJavaScriptCore.a */,
+				8FA30A3813C43D2700DF6FA1 /* UIKit.framework */,
+				8FA30A3A13C43D2700DF6FA1 /* Foundation.framework */,
+				8FA30A3C13C43D2700DF6FA1 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8FA30A3E13C43D2700DF6FA1 /* SproutCoreNative */ = {
+			isa = PBXGroup;
+			children = (
+				8FA30A4713C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.h */,
+				8FA30A4813C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.m */,
+				8FA30A4A13C43D2700DF6FA1 /* MainWindow.xib */,
+				8FA30A4D13C43D2700DF6FA1 /* SproutCoreNativeViewController.h */,
+				8FA30A4E13C43D2700DF6FA1 /* SproutCoreNativeViewController.m */,
+				8FA30A5013C43D2700DF6FA1 /* SproutCoreNativeViewController.xib */,
+				8FA30A3F13C43D2700DF6FA1 /* Supporting Files */,
+			);
+			path = SproutCoreNative;
+			sourceTree = "<group>";
+		};
+		8FA30A3F13C43D2700DF6FA1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8FA30A4013C43D2700DF6FA1 /* SproutCoreNative-Info.plist */,
+				8FA30A4113C43D2700DF6FA1 /* InfoPlist.strings */,
+				8FA30A4413C43D2700DF6FA1 /* SproutCoreNative-Prefix.pch */,
+				8FA30A4513C43D2700DF6FA1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8FA30A5E13C43D2800DF6FA1 /* SproutCoreNativeTests */ = {
+			isa = PBXGroup;
+			children = (
+				8FA30A6513C43D2800DF6FA1 /* SproutCoreNativeTests.h */,
+				8FA30A6713C43D2800DF6FA1 /* SproutCoreNativeTests.m */,
+				8FA30A5F13C43D2800DF6FA1 /* Supporting Files */,
+			);
+			path = SproutCoreNativeTests;
+			sourceTree = "<group>";
+		};
+		8FA30A5F13C43D2800DF6FA1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8FA30A6013C43D2800DF6FA1 /* SproutCoreNativeTests-Info.plist */,
+				8FA30A6113C43D2800DF6FA1 /* InfoPlist.strings */,
+				8FA30A6413C43D2800DF6FA1 /* SproutCoreNativeTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8FA30A7713C4407C00DF6FA1 /* JavaScriptCore */ = {
+			isa = PBXGroup;
+			children = (
+				8FA30A7813C4407C00DF6FA1 /* JavaScript.h */,
+				8FA30A7913C4407C00DF6FA1 /* JavaScriptCore.h */,
+				8FA30A7A13C4407C00DF6FA1 /* JSBase.h */,
+				8FA30A7B13C4407C00DF6FA1 /* JSContextRef.h */,
+				8FA30A7C13C4407C00DF6FA1 /* JSObjectRef.h */,
+				8FA30A7D13C4407C00DF6FA1 /* JSStringRef.h */,
+				8FA30A7E13C4407C00DF6FA1 /* JSStringRefCF.h */,
+				8FA30A7F13C4407C00DF6FA1 /* JSValueRef.h */,
+				8FA30A8013C4407C00DF6FA1 /* WebKitAvailability.h */,
+			);
+			path = JavaScriptCore;
+			sourceTree = "<group>";
+		};
+		8FA30A8113C447BD00DF6FA1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8FA30A8213C449A700DF6FA1 /* handlebars.1.0.0.beta.3.js */,
+			);
+			name = Resources;
+			path = SproutCoreNative;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8FA30A3313C43D2700DF6FA1 /* SproutCoreNative */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FA30A6B13C43D2800DF6FA1 /* Build configuration list for PBXNativeTarget "SproutCoreNative" */;
+			buildPhases = (
+				8FA30A3013C43D2700DF6FA1 /* Sources */,
+				8FA30A3113C43D2700DF6FA1 /* Frameworks */,
+				8FA30A3213C43D2700DF6FA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SproutCoreNative;
+			productName = SproutCoreNative;
+			productReference = 8FA30A3413C43D2700DF6FA1 /* SproutCoreNative.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8FA30A5713C43D2800DF6FA1 /* SproutCoreNativeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FA30A6E13C43D2800DF6FA1 /* Build configuration list for PBXNativeTarget "SproutCoreNativeTests" */;
+			buildPhases = (
+				8FA30A5313C43D2800DF6FA1 /* Sources */,
+				8FA30A5413C43D2800DF6FA1 /* Frameworks */,
+				8FA30A5513C43D2800DF6FA1 /* Resources */,
+				8FA30A5613C43D2800DF6FA1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FA30A5D13C43D2800DF6FA1 /* PBXTargetDependency */,
+			);
+			name = SproutCoreNativeTests;
+			productName = SproutCoreNativeTests;
+			productReference = 8FA30A5813C43D2800DF6FA1 /* SproutCoreNativeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8FA30A2B13C43D2600DF6FA1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Springenwerk;
+			};
+			buildConfigurationList = 8FA30A2E13C43D2600DF6FA1 /* Build configuration list for PBXProject "SproutCoreNative" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8FA30A2913C43D2600DF6FA1;
+			productRefGroup = 8FA30A3513C43D2700DF6FA1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FA30A3313C43D2700DF6FA1 /* SproutCoreNative */,
+				8FA30A5713C43D2800DF6FA1 /* SproutCoreNativeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8FA30A3213C43D2700DF6FA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FA30A4313C43D2700DF6FA1 /* InfoPlist.strings in Resources */,
+				8FA30A8413C449AB00DF6FA1 /* handlebars.1.0.0.beta.3.js in Resources */,
+				8FA30A4C13C43D2700DF6FA1 /* MainWindow.xib in Resources */,
+				8FA30A5213C43D2700DF6FA1 /* SproutCoreNativeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FA30A5513C43D2800DF6FA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FA30A6313C43D2800DF6FA1 /* InfoPlist.strings in Resources */,
+				8FA30A6613C43D2800DF6FA1 /* SproutCoreNativeTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8FA30A5613C43D2800DF6FA1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FA30A3013C43D2700DF6FA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FA30A4613C43D2700DF6FA1 /* main.m in Sources */,
+				8FA30A4913C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.m in Sources */,
+				8FA30A4F13C43D2700DF6FA1 /* SproutCoreNativeViewController.m in Sources */,
+				8FA30A8313C449A700DF6FA1 /* handlebars.1.0.0.beta.3.js in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FA30A5313C43D2800DF6FA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FA30A6813C43D2800DF6FA1 /* SproutCoreNativeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FA30A5D13C43D2800DF6FA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FA30A3313C43D2700DF6FA1 /* SproutCoreNative */;
+			targetProxy = 8FA30A5C13C43D2800DF6FA1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8FA30A4113C43D2700DF6FA1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FA30A4213C43D2700DF6FA1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8FA30A4A13C43D2700DF6FA1 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FA30A4B13C43D2700DF6FA1 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		8FA30A5013C43D2700DF6FA1 /* SproutCoreNativeViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FA30A5113C43D2700DF6FA1 /* en */,
+			);
+			name = SproutCoreNativeViewController.xib;
+			sourceTree = "<group>";
+		};
+		8FA30A6113C43D2800DF6FA1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FA30A6213C43D2800DF6FA1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8FA30A6913C43D2800DF6FA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SOURCE_ROOT}";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8FA30A6A13C43D2800DF6FA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SOURCE_ROOT}";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		8FA30A6C13C43D2800DF6FA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SproutCoreNative/SproutCoreNative-Prefix.pch";
+				INFOPLIST_FILE = "SproutCoreNative/SproutCoreNative-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SDKROOT)/usr/lib/gcc/arm-apple-darwin10/4.0.1\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8FA30A6D13C43D2800DF6FA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SproutCoreNative/SproutCoreNative-Prefix.pch";
+				INFOPLIST_FILE = "SproutCoreNative/SproutCoreNative-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SDKROOT)/usr/lib/gcc/arm-apple-darwin10/4.0.1\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8FA30A6F13C43D2800DF6FA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SproutCoreNative.app/SproutCoreNative";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SproutCoreNativeTests/SproutCoreNativeTests-Prefix.pch";
+				INFOPLIST_FILE = "SproutCoreNativeTests/SproutCoreNativeTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		8FA30A7013C43D2800DF6FA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SproutCoreNative.app/SproutCoreNative";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SproutCoreNativeTests/SproutCoreNativeTests-Prefix.pch";
+				INFOPLIST_FILE = "SproutCoreNativeTests/SproutCoreNativeTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8FA30A2E13C43D2600DF6FA1 /* Build configuration list for PBXProject "SproutCoreNative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FA30A6913C43D2800DF6FA1 /* Debug */,
+				8FA30A6A13C43D2800DF6FA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FA30A6B13C43D2800DF6FA1 /* Build configuration list for PBXNativeTarget "SproutCoreNative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FA30A6C13C43D2800DF6FA1 /* Debug */,
+				8FA30A6D13C43D2800DF6FA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8FA30A6E13C43D2800DF6FA1 /* Build configuration list for PBXNativeTarget "SproutCoreNativeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FA30A6F13C43D2800DF6FA1 /* Debug */,
+				8FA30A7013C43D2800DF6FA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8FA30A2B13C43D2600DF6FA1 /* Project object */;
+}
