@@ -8,8 +8,6 @@
 
 #import "SproutCoreNativeAppDelegate.h"
 
-#import "SproutCoreNativeViewController.h"
-
 @implementation SproutCoreNativeAppDelegate
 
 
