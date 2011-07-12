@@ -11,6 +11,34 @@
 @implementation HandlebarsTableViewController
 
 static JSGlobalContextRef gGlobalJSContext = NULL;
+static JSClassRef  gSCNClass = NULL;
+
+static JSValueRef __SCNLogMethod(JSContextRef ctx, JSObjectRef function, JSObjectRef thisObject, size_t argumentCount, const JSValueRef arguments[], JSValueRef* exception) 
+{
+    JSValueRef excp = NULL;
+    if(argumentCount > 0) {
+        NSLog(@"JS LOG: %@", 
+              (NSString*)JSStringCopyCFString(kCFAllocatorDefault, (JSStringRef)JSValueToStringCopy(ctx, arguments[0], &excp)));        
+    }
+
+    return JSValueMakeNull(ctx);
+}
+
+static JSValueRef __SCNToStringMethod(JSContextRef ctx, JSObjectRef function, JSObjectRef thisObject, size_t argumentCount, const JSValueRef arguments[], JSValueRef* exception) 
+{
+    return JSValueMakeString(ctx, JSStringCreateWithUTF8CString([@"The SproutCoreNative object." UTF8String]));
+}
+
+static JSValueRef __SCNGetProperty(JSContextRef ctx, JSObjectRef object, JSStringRef propertyNameJS, JSValueRef* exception) {
+    NSString *propertyName = (NSString*)JSStringCopyCFString(kCFAllocatorDefault, propertyNameJS);
+    if([propertyName isEqualToString:@"log"]) {
+        return JSObjectMakeFunctionWithCallback(ctx, propertyNameJS, __SCNLogMethod);
+    } else if ([propertyName isEqualToString:@"toString"]) {
+        return JSObjectMakeFunctionWithCallback(ctx, propertyNameJS, __SCNToStringMethod);
+    }
+    NSLog(@"undefined property %@", propertyName);
+    return JSValueMakeNull(ctx);
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,27 +65,26 @@ static JSGlobalContextRef gGlobalJSContext = NULL;
 + (JSGlobalContextRef) globalJSContext 
 {
 	if (gGlobalJSContext == NULL) {
-		gGlobalJSContext = JSGlobalContextCreate(NULL);       
+		gGlobalJSContext = JSGlobalContextCreate(NULL);      
         
-        NSString *domcore = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"domcore" ofType:@"js"]  encoding:NSUTF8StringEncoding error:nil];
-                
-        NSString *jquery = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"jquery-1.6.2" ofType:@"js"]  encoding:NSUTF8StringEncoding error:nil];
+        JSClassDefinition jsClass = kJSClassDefinitionEmpty;
+        jsClass.getProperty	= __SCNGetProperty;
+        gSCNClass = JSClassCreate(&jsClass);
         
-        NSString *sproutcore = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sproutcore-2.0.beta.1" ofType:@"js"]  encoding:NSUTF8StringEncoding error:nil];
-        
-        //evalute handlebars 
-        //[self runJS:handlebars];
-        NSLog(@"loading domcore...");
-        [self runJS:domcore];
+        JSObjectRef global = JSContextGetGlobalObject(gGlobalJSContext);
+        JSObjectRef obj = JSObjectMake(gGlobalJSContext, gSCNClass, nil);
+        JSStringRef property = JSStringCreateWithUTF8CString([@"SCN" UTF8String]);
+        JSValueRef exception = NULL;
+        JSObjectSetProperty(gGlobalJSContext, global, property, (JSValueRef)obj, kJSPropertyAttributeDontDelete, &exception);
+                        
+        [[self class] loadJSLibrary:@"domcore"];
         
         // set up fake window
         NSLog(@"setting up dom env...");
-        [self runJS:@"this.prototype = core; window = this; window.document = new core.Document(); location = {href: 'http://localhost'}; window.document.prototype = core; window.addEventListener = (new core.Node()).addEventListener; window.navigator = {userAgent: 'Webkit'}; console = {log: function() {}};"];
+        [self runJS:@"this.prototype = core; window = this; window.document = new core.Document(); location = {href: 'http://localhost'}; window.document.prototype = core; window.addEventListener = (new core.Node()).addEventListener; window.navigator = {userAgent: 'Webkit'}; console = {log: SCN.log};"];
                 
-        NSLog(@"loading jquery...");
-        [self runJS:jquery];
-        NSLog(@"loading sproutcore...");
-        [self runJS:sproutcore];
+        [[self class] loadJSLibrary:@"jquery-1.6.2"];
+        [[self class] loadJSLibrary:@"sproutcore-2.0.beta.1"];
             
         //create and compile the template
         [self runJS:@"var source   = \"Yo, {{fullName}}!\";\
@@ -68,6 +95,8 @@ static JSGlobalContextRef gGlobalJSContext = NULL;
         
         //create an SC Person class
         [self runJS:@"Person = SC.Object.extend({firstName: null, lastName: null, fullName: function() {return this.get('firstName')+' '+this.get('lastName');}.property('firstName', 'lastName')});"];
+        
+        [self runJS:@"console.log('Done.');"];
 	}
 	
 	return gGlobalJSContext;
@@ -107,6 +136,13 @@ static JSGlobalContextRef gGlobalJSContext = NULL;
     JSStringRelease(scriptJS);
     
     return res;
+}
+
++ (void)loadJSLibrary:(NSString*)libraryName {
+    NSString *library = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:libraryName ofType:@"js"]  encoding:NSUTF8StringEncoding error:nil];
+    
+    NSLog(@"loading library %@...", libraryName);
+    [self runJS:library];  
 }
 
 

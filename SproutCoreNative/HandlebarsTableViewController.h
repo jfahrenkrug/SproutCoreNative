@@ -16,5 +16,6 @@
 
 + (JSGlobalContextRef) globalJSContext;
 + (NSString *)runJS:(NSString *)aJSString;
++ (void)loadJSLibrary:(NSString*)libraryName;
 
 @end
