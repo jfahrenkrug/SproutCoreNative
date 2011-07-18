@@ -14,7 +14,4 @@
     SCNEngine *scnEngine;
 }
 
-- (void)setupJSEnvironment;
-
-
 @end

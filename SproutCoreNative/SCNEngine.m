@@ -36,7 +36,7 @@
 - (NSString *)runJS:(NSString *)aJSString 
 {
     if (!aJSString) {
-        NSLog(@"JS String is empty!");
+        NSLog(@"[SCN] JS String is empty!");
         return nil;
     }
     
@@ -53,10 +53,10 @@
             NSString* exceptionRes = (NSString*)JSStringCopyCFString(kCFAllocatorDefault, exceptionArg); 
             
             JSStringRelease(exceptionArg);
-            NSLog(@"JavaScript exception: %@", exceptionRes);
+            NSLog(@"[SCN] JavaScript exception: %@", exceptionRes);
         }
         
-        NSLog(@"No result returned");
+        NSLog(@"[SCN] No result returned");
     } else {
         JSStringRef jstrArg = JSValueToStringCopy([self jsContext], result, NULL);
         res = (NSString*)JSStringCopyCFString(kCFAllocatorDefault, jstrArg); 
@@ -75,7 +75,7 @@
 - (void)loadJSLibrary:(NSString*)libraryName {
     NSString *library = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:libraryName ofType:@"js"]  encoding:NSUTF8StringEncoding error:nil];
     
-    NSLog(@"loading library %@...", libraryName);
+    NSLog(@"[SCN] loading library %@...", libraryName);
     [self runJS:library];  
 }
 
@@ -89,7 +89,7 @@ static JSValueRef __SCNLogMethod(JSContextRef ctx, JSObjectRef function, JSObjec
 {
     JSValueRef excp = NULL;
     if(argumentCount > 0) {
-        NSLog(@"JS LOG: %@", 
+        NSLog(@"[SCN] JS LOG: %@", 
               (NSString*)JSStringCopyCFString(kCFAllocatorDefault, (JSStringRef)JSValueToStringCopy(ctx, arguments[0], &excp)));        
     }
     
@@ -114,7 +114,7 @@ static JSValueRef __SCNGetProperty(JSContextRef ctx, JSObjectRef object, JSStrin
     } else if ([propertyName isEqualToString:@"toString"]) {
         return JSObjectMakeFunctionWithCallback(ctx, propertyNameJS, __SCNToStringMethod);
     }
-    NSLog(@"undefined property %@", propertyName);
+    NSLog(@"[SCN] undefined property %@", propertyName);
     return JSValueMakeNull(ctx);
 }
 

@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SCNEngine.h"
 
 @interface SCUIViewController : UIViewController {
-    
+    SCNEngine *scnEngine;
 }
 
 @end

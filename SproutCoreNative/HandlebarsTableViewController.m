@@ -8,9 +8,11 @@
 
 #import "HandlebarsTableViewController.h"
 
+@interface HandlebarsTableViewController(PrivateMethods)
+- (void)setupJSEnvironment;
+@end
+
 @implementation HandlebarsTableViewController
-
-
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,7 +39,7 @@
     [scnEngine runJS:@"this.prototype = core; window = this; window.document = new core.Document(); location = {href: 'http://localhost'}; window.document.prototype = core; window.addEventListener = (new core.Node()).addEventListener; window.navigator = {userAgent: 'Webkit'}; console = {log: SCN.log};"];
     
     [scnEngine loadJSLibrary:@"jquery-1.6.2"];
-    [scnEngine loadJSLibrary:@"sproutcore-2.0.beta.1"];
+    [scnEngine loadJSLibrary:@"sproutcore"];
     
     //create and compile the template
     [scnEngine runJS:@"var source   = \"Yo, {{fullName}}!\";\
