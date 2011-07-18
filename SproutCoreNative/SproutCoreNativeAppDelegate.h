@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class HandlebarsTableViewController;
+@class RootViewController;
 
 @interface SproutCoreNativeAppDelegate : NSObject <UIApplicationDelegate> {
 
@@ -16,6 +16,6 @@
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
-@property (nonatomic, retain) IBOutlet HandlebarsTableViewController *viewController;
+@property (nonatomic, retain) IBOutlet RootViewController *viewController;
 
 @end

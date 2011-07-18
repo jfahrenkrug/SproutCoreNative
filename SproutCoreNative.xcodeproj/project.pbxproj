@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F56F16013D412FE00BE4D7B /* SCUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F56F15F13D412FE00BE4D7B /* SCUIViewController.m */; };
+		8F56F16413D4139800BE4D7B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F56F16313D4139800BE4D7B /* RootViewController.m */; };
 		8FA30A3913C43D2700DF6FA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A3813C43D2700DF6FA1 /* UIKit.framework */; };
 		8FA30A3B13C43D2700DF6FA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A3A13C43D2700DF6FA1 /* Foundation.framework */; };
 		8FA30A3D13C43D2700DF6FA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A3C13C43D2700DF6FA1 /* CoreGraphics.framework */; };
@@ -24,11 +26,8 @@
 		8FA30A7413C4400400DF6FA1 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A7313C4400400DF6FA1 /* libstdc++.dylib */; };
 		8FA30A7613C4401000DF6FA1 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A7513C4401000DF6FA1 /* libicucore.dylib */; };
 		8FA30A8713C4540400DF6FA1 /* HandlebarsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30A8613C4540400DF6FA1 /* HandlebarsTableViewController.m */; };
-		8FA30B1F13C4B26000DF6FA1 /* sproutcore-2.0.beta.1.js in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30B1D13C4B26000DF6FA1 /* sproutcore-2.0.beta.1.js */; };
 		8FA30B2113C4B2DA00DF6FA1 /* sproutcore-2.0.beta.1.js in Resources */ = {isa = PBXBuildFile; fileRef = 8FA30B1D13C4B26000DF6FA1 /* sproutcore-2.0.beta.1.js */; };
-		8FA30B5813C4D50900DF6FA1 /* jquery-1.6.2.js in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30B5713C4D50900DF6FA1 /* jquery-1.6.2.js */; };
 		8FA30B5913C4D54200DF6FA1 /* jquery-1.6.2.js in Resources */ = {isa = PBXBuildFile; fileRef = 8FA30B5713C4D50900DF6FA1 /* jquery-1.6.2.js */; };
-		8FA30B5B13C4D74200DF6FA1 /* domcore.js in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30B5A13C4D74200DF6FA1 /* domcore.js */; };
 		8FA30B5C13C4D76400DF6FA1 /* domcore.js in Resources */ = {isa = PBXBuildFile; fileRef = 8FA30B5A13C4D74200DF6FA1 /* domcore.js */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F56F15E13D412FE00BE4D7B /* SCUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCUIViewController.h; sourceTree = "<group>"; };
+		8F56F15F13D412FE00BE4D7B /* SCUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCUIViewController.m; sourceTree = "<group>"; };
+		8F56F16213D4139800BE4D7B /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		8F56F16313D4139800BE4D7B /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		8FA30A3413C43D2700DF6FA1 /* SproutCoreNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SproutCoreNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA30A3813C43D2700DF6FA1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8FA30A3A13C43D2700DF6FA1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -149,6 +152,10 @@
 				8FA30A3F13C43D2700DF6FA1 /* Supporting Files */,
 				8FA30A8513C4540400DF6FA1 /* HandlebarsTableViewController.h */,
 				8FA30A8613C4540400DF6FA1 /* HandlebarsTableViewController.m */,
+				8F56F15E13D412FE00BE4D7B /* SCUIViewController.h */,
+				8F56F15F13D412FE00BE4D7B /* SCUIViewController.m */,
+				8F56F16213D4139800BE4D7B /* RootViewController.h */,
+				8F56F16313D4139800BE4D7B /* RootViewController.m */,
 			);
 			path = SproutCoreNative;
 			sourceTree = "<group>";
@@ -324,9 +331,8 @@
 				8FA30A4613C43D2700DF6FA1 /* main.m in Sources */,
 				8FA30A4913C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.m in Sources */,
 				8FA30A8713C4540400DF6FA1 /* HandlebarsTableViewController.m in Sources */,
-				8FA30B1F13C4B26000DF6FA1 /* sproutcore-2.0.beta.1.js in Sources */,
-				8FA30B5813C4D50900DF6FA1 /* jquery-1.6.2.js in Sources */,
-				8FA30B5B13C4D74200DF6FA1 /* domcore.js in Sources */,
+				8F56F16013D412FE00BE4D7B /* SCUIViewController.m in Sources */,
+				8F56F16413D4139800BE4D7B /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +517,7 @@
 				8FA30A6D13C43D2800DF6FA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FA30A6E13C43D2800DF6FA1 /* Build configuration list for PBXNativeTarget "SproutCoreNativeTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +526,7 @@
 				8FA30A7013C43D2800DF6FA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

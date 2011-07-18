@@ -7,6 +7,7 @@
 //
 
 #import "SproutCoreNativeAppDelegate.h"
+#import "RootViewController.h"
 
 @implementation SproutCoreNativeAppDelegate
 
@@ -19,7 +20,7 @@
 {
     // Override point for customization after application launch.
      
-    self.window.rootViewController = self.viewController;
+    self.window.rootViewController =  [[[UINavigationController alloc] initWithRootViewController:self.viewController] autorelease];
     [self.window makeKeyAndVisible];
     return YES;
 }
