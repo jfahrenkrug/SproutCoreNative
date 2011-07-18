@@ -18,6 +18,7 @@
     if (self) {
         // Custom initialization
         scnEngine = [[SCNEngine alloc] init];
+        [self setupJSEnvironment];
     }
     return self;
 }
@@ -26,6 +27,29 @@
 {
     [scnEngine release];
     [super dealloc];
+}
+
+- (void)setupJSEnvironment {
+    [scnEngine loadJSLibrary:@"domcore"];
+    
+    // set up fake window
+    NSLog(@"setting up dom env...");
+    [scnEngine runJS:@"this.prototype = core; window = this; window.document = new core.Document(); location = {href: 'http://localhost'}; window.document.prototype = core; window.addEventListener = (new core.Node()).addEventListener; window.navigator = {userAgent: 'Webkit'}; console = {log: SCN.log};"];
+    
+    [scnEngine loadJSLibrary:@"jquery-1.6.2"];
+    [scnEngine loadJSLibrary:@"sproutcore-2.0.beta.1"];
+    
+    //create and compile the template
+    [scnEngine runJS:@"var source   = \"Yo, {{fullName}}!\";\
+     var template = Handlebars.compile(source);"];
+    
+    //set up the data
+    [scnEngine runJS:@"var people = [{firstName: 'Charles', lastName: 'Jolley'}, {firstName: 'Yehuda', lastName: 'Katz'}, {firstName: 'Johannes', lastName: 'Fahrenkrug'}, {firstName: 'Tom', lastName: 'Dale'}, {firstName: 'Majd', lastName: 'Taby'}, {firstName: 'Colin', lastName: 'Campbell'}];"];
+    
+    //create an SC Person class
+    [scnEngine runJS:@"Person = SC.Object.extend({firstName: null, lastName: null, fullName: function() {return this.get('firstName')+' '+this.get('lastName');}.property('firstName', 'lastName')});"];
+    
+    [scnEngine runJS:@"console.log('Done.');"];
 }
 
 - (void)didReceiveMemoryWarning

@@ -25,27 +25,6 @@
         JSStringRef property = JSStringCreateWithUTF8CString([@"SCN" UTF8String]);
         JSValueRef exception = NULL;
         JSObjectSetProperty(_jsContext, global, property, (JSValueRef)obj, kJSPropertyAttributeDontDelete, &exception);
-        
-        [self loadJSLibrary:@"domcore"];
-        
-        // set up fake window
-        NSLog(@"setting up dom env...");
-        [self runJS:@"this.prototype = core; window = this; window.document = new core.Document(); location = {href: 'http://localhost'}; window.document.prototype = core; window.addEventListener = (new core.Node()).addEventListener; window.navigator = {userAgent: 'Webkit'}; console = {log: SCN.log};"];
-        
-        [self loadJSLibrary:@"jquery-1.6.2"];
-        [self loadJSLibrary:@"sproutcore-2.0.beta.1"];
-        
-        //create and compile the template
-        [self runJS:@"var source   = \"Yo, {{fullName}}!\";\
-         var template = Handlebars.compile(source);"];
-        
-        //set up the data
-        [self runJS:@"var people = [{firstName: 'Charles', lastName: 'Jolley'}, {firstName: 'Yehuda', lastName: 'Katz'}, {firstName: 'Johannes', lastName: 'Fahrenkrug'}, {firstName: 'Tom', lastName: 'Dale'}, {firstName: 'Majd', lastName: 'Taby'}, {firstName: 'Colin', lastName: 'Campbell'}];"];
-        
-        //create an SC Person class
-        [self runJS:@"Person = SC.Object.extend({firstName: null, lastName: null, fullName: function() {return this.get('firstName')+' '+this.get('lastName');}.property('firstName', 'lastName')});"];
-        
-        [self runJS:@"console.log('Done.');"];
 	}
 	
 	return _jsContext;
