@@ -7,15 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <JavaScriptCore/JavaScriptCore.h>
+#import "SCNEngine.h"
 
 
 @interface HandlebarsTableViewController : UITableViewController {
-    
+    SCNEngine *scnEngine;
 }
 
-+ (JSGlobalContextRef) globalJSContext;
-+ (NSString *)runJS:(NSString *)aJSString;
-+ (void)loadJSLibrary:(NSString*)libraryName;
 
 @end

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8F56F16013D412FE00BE4D7B /* SCUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F56F15F13D412FE00BE4D7B /* SCUIViewController.m */; };
 		8F56F16413D4139800BE4D7B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F56F16313D4139800BE4D7B /* RootViewController.m */; };
+		8F56F16813D41DD900BE4D7B /* SCNEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F56F16713D41DD900BE4D7B /* SCNEngine.m */; };
 		8FA30A3913C43D2700DF6FA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A3813C43D2700DF6FA1 /* UIKit.framework */; };
 		8FA30A3B13C43D2700DF6FA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A3A13C43D2700DF6FA1 /* Foundation.framework */; };
 		8FA30A3D13C43D2700DF6FA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA30A3C13C43D2700DF6FA1 /* CoreGraphics.framework */; };
@@ -46,6 +47,8 @@
 		8F56F15F13D412FE00BE4D7B /* SCUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCUIViewController.m; sourceTree = "<group>"; };
 		8F56F16213D4139800BE4D7B /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		8F56F16313D4139800BE4D7B /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		8F56F16613D41DD900BE4D7B /* SCNEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNEngine.h; sourceTree = "<group>"; };
+		8F56F16713D41DD900BE4D7B /* SCNEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNEngine.m; sourceTree = "<group>"; };
 		8FA30A3413C43D2700DF6FA1 /* SproutCoreNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SproutCoreNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA30A3813C43D2700DF6FA1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8FA30A3A13C43D2700DF6FA1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,6 +112,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F56F16513D41DA500BE4D7B /* SCN */ = {
+			isa = PBXGroup;
+			children = (
+				8F56F16613D41DD900BE4D7B /* SCNEngine.h */,
+				8F56F16713D41DD900BE4D7B /* SCNEngine.m */,
+			);
+			name = SCN;
+			sourceTree = "<group>";
+		};
 		8FA30A2913C43D2600DF6FA1 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +158,7 @@
 		8FA30A3E13C43D2700DF6FA1 /* SproutCoreNative */ = {
 			isa = PBXGroup;
 			children = (
+				8F56F16513D41DA500BE4D7B /* SCN */,
 				8FA30A4713C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.h */,
 				8FA30A4813C43D2700DF6FA1 /* SproutCoreNativeAppDelegate.m */,
 				8FA30A4A13C43D2700DF6FA1 /* MainWindow.xib */,
@@ -333,6 +346,7 @@
 				8FA30A8713C4540400DF6FA1 /* HandlebarsTableViewController.m in Sources */,
 				8F56F16013D412FE00BE4D7B /* SCUIViewController.m in Sources */,
 				8F56F16413D4139800BE4D7B /* RootViewController.m in Sources */,
+				8F56F16813D41DD900BE4D7B /* SCNEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
